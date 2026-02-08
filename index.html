@@ -1,26 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>website halmi sofyan</title>
-    <link rel="stylesheet" href="">
+    <title>gemini_invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; 
+            color: #f8fafc;
+            padding-bottom: 60px;
+        }
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f9e29c 50%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px -5px rgba(212, 175, 55, 0.4);
+        }
+        .luxury-border {
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+        }
+        
+        /* Grid 4 kolom untuk tampilan HP ke samping */
+        .force-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .rotating {
+            animation: rotate 3s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        html, body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
-<body>
-  <nav>
-    <div class="wrapper">
-        <div class="class"><a href="">websitegemini</a></div>
-        <div class="menu">
-            <ul>
-                <li><a href=""></a>HOME</li>
-                <LI><a href=""></a>COURSE</LI>
-                <li><a href=""></a>TUTORS</li>
-                <li><a href=""></a>PARTERNS</li>
-                <li><a href=""></a>CONTAK</li>
-                <li><a href=""><div class="class">tbl-biru</div></a>SIGN UP</li>
-            </ul>
+<body class="p-1 md:p-12">
+
+    <!-- Elemen Musik -->
+    <audio id="bgMusic" loop>
+        <source src="music" type="audio/mpeg">
+    </audio>
+
+    <!-- Indikator Musik Visual -->
+    <div class="fixed bottom-16 right-2 z-50">
+        <div class="w-8 h-8 md:w-14 md:h-14 bg-slate-900/80 border border-[#d4af37]/50 rounded-full flex items-center justify-center text-[#d4af37] shadow-xl backdrop-blur-md">
+            <svg id="musicIcon" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-7 md:h-7 rotating" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
+            </svg>
         </div>
     </div>
-  </nav>  
+
+    <!-- Header -->
+    <header class="text-center mb-6 mt-4">
+        <h1 class="serif text-2xl md:text-7xl gold-gradient font-bold mb-1">Gemini_Invitation</h1>
+        <p class="text-slate-400 max-w-2xl mx-auto uppercase tracking-[0.2em] text-[7px] md:text-xs font-light px-4">Katalog Undangan Digital</p>
+        <div class="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-3"></div>
+    </header>
+
+    <!-- Section Deskripsi & Fitur -->
+    <section class="max-w-4xl mx-auto mb-10 px-4 text-center">
+        <div class="bg-slate-900/30 luxury-border p-4 md:p-8 rounded-xl backdrop-blur-sm shadow-2xl">
+            <h2 class="serif text-lg md:text-2xl text-white mb-3">Undangan Digital website simpel no delay</h2>
+            <p class="text-slate-400 text-[9px] md:text-base leading-relaxed mb-6">
+                Hadirkan kesan mewah untuk hari bahagia Anda. Undangan kami dirancang khusus untuk simpel, tampilan sederhana no ornamen sehingga tidak delay, dan kemudahan kustomisasi penuh sesuai keinginan Anda.
+            </p>
+            
+            <!-- List Keunggulan Baru -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-left border-t border-[#d4af37]/20 pt-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-[#d4af37] text-xs md:text-xl">🎵</span>
+                    <h4 class="text-[8px] md:text-xs font-bold text-white uppercase">Custom Musik</h4>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#d4af37] text-xs md:text-xl">🎨</span>
+                    <h4 class="text-[8px] md:text-xs font-bold text-white uppercase">Custom Warna</h4>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#d4af37] text-xs md:text-xl">✍️</span>
+                    <h4 class="text-[8px] md:text-xs font-bold text-white uppercase">Custom Teks</h4>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#d4af37] text-xs md:text-xl">🖼️</span>
+                    <h4 class="text-[8px] md:text-xs font-bold text-white uppercase">Custom Galery</h4>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#d4af37] text-xs md:text-xl">🚀</span>
+                    <h4 class="text-[8px] md:text-xs font-bold text-white uppercase">Tanpa Lag</h4>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[#d4af37] text-xs md:text-xl">💎</span>
+                    <h4 class="text-[8px] md:text-xs font-bold text-white uppercase">Ringan tidak berat</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontainer Grid Katalog -->
+    <div id="catalogGrid" class="force-grid-4 gap-1 md:gap-6 max-w-[1400px] mx-auto">
+        <script>
+            // ============================================================
+            // 1. PENGATURAN NOMOR WHATSAPP
+            // ============================================================
+            const waNumber = "6285811927625"; 
+
+            // ============================================================
+            // 2. DAFTAR SEMUA 40 TEMA & LINK DEMO
+            // Silakan ganti link demo di bawah sesuai keinginan Anda.
+            // ============================================================
+            const themesData = [
+                { id: "01", name: "Royal Gold", price: "150rb", demo: "https://invitationweb.github.io/tema_1_orange/" },
+                { id: "02", name: "Clean Minimal", price: "100rb", demo: "https://invitationweb.github.io/tema_2_black_white/" },
+                { id: "03", name: "Rustic Fall", price: "125rb", demo: "https://invitationweb.github.io/tema_3_choholate/" },
+                { id: "04", name: "Midnight", price: "140rb", demo: "https://invitationweb.github.io/tema_4_album/" },
+                { id: "05", name: "Emerald", price: "135rb", demo: "https://invitationweb.github.io/tema_5_red_v1/" },
+                { id: "06", name: "Champagne", price: "160rb", demo: "https://invitationweb.github.io/tema_6_purple/" },
+                { id: "07", name: "Vintage", price: "120rb", demo: "https://invitationweb.github.io/tema_7_pink/" },
+                { id: "08", name: "Diamond", price: "200rb", demo: "https://invitationweb.github.io/tema_8_merahv2/" },
+                { id: "09", name: "Soft Lilac", price: "110rb", demo: "https://invitationweb.github.io/tema-_9_yellow_greenv1/" },
+                { id: "10", name: "Ocean Breeze", price: "130rb", demo: "https://invitationweb.github.io/tema_10_ollive/" },
+                { id: "11", name: "Golden Rose", price: "155rb", demo: "https://invitationweb.github.io/tema_11_pink_sakura/" },
+                { id: "12", name: "White Pearl", price: "95rb", demo: "https://invitationweb.github.io/tema_12_blue/" },
+                { id: "13", name: "Classic Red", price: "145rb", demo: "https://invitationweb.github.io/tema_13_cream_yellow/" },
+                { id: "14", name: "Modern Grey", price: "105rb", demo: "https://github.com/invitationweb/tema_14_redv2" },
+                { id: "15", name: "Nature Green", price: "115rb", demo: "https://invitationweb.github.io/tema_15_redv3/" },
+                { id: "16", name: "Black Velvet", price: "180rb", demo: "https://demo16.com" },
+                { id: "17", name: "Navy Blue", price: "150rb", demo: "https://demo17.com" },
+                { id: "18", name: "Pastel Pink", price: "100rb", demo: "https://demo18.com" },
+                { id: "19", name: "Autumn Wood", price: "125rb", demo: "https://demo19.com" },
+                { id: "20", name: "Luxury Silver", price: "140rb", demo: "https://demo20.com" },
+                { id: "21", name: "Boho Chic", price: "135rb", demo: "https://demo21.com" },
+                { id: "22", name: "Simple White", price: "160rb", demo: "https://demo22.com" },
+                { id: "23", name: "Ruby Wine", price: "120rb", demo: "https://demo23.com" },
+                { id: "24", name: "Obsidian", price: "200rb", demo: "https://demo24.com" },
+                { id: "25", name: "Peony Bloom", price: "110rb", demo: "https://demo25.com" },
+                { id: "26", name: "Tropical", price: "130rb", demo: "https://demo26.com" },
+                { id: "27", name: "Ivory Gold", price: "155rb", demo: "https://demo27.com" },
+                { id: "28", name: "Sand Stone", price: "95rb", demo: "https://demo28.com" },
+                { id: "29", name: "Deep Forest", price: "145rb", demo: "https://demo29.com" },
+                { id: "30", name: "Azure Sky", price: "105rb", demo: "https://demo30.com" },
+                { id: "31", name: "Lavender", price: "115rb", demo: "https://demo31.com" },
+                { id: "32", name: "Midnight Sun", price: "180rb", demo: "https://demo32.com" },
+                { id: "33", name: "Copper Luxe", price: "150rb", demo: "https://demo33.com" },
+                { id: "34", name: "Cotton Candy", price: "100rb", demo: "https://demo34.com" },
+                { id: "35", name: "Cedar Wood", price: "125rb", demo: "https://demo35.com" },
+                { id: "36", name: "Night Rain", price: "140rb", demo: "https://demo36.com" },
+                { id: "37", name: "Misty Rose", price: "135rb", demo: "https://demo37.com" },
+                { id: "38", name: "Sunny Day", price: "160rb", demo: "https://demo38.com" },
+                { id: "39", name: "Marble White", price: "120rb", demo: "https://demo39.com" },
+                { id: "40", name: "Imperial", price: "200rb", demo: "https://demo40.com" }
+            ];
+
+            const waBase = `https://wa.me/${waNumber}?text=`;
+            const container = document.getElementById('catalogGrid');
+
+            themesData.forEach((theme, index) => {
+                const displayName = `${theme.name} #${theme.id}`;
+                const card = `
+                    <div class="luxury-border bg-slate-900/40 backdrop-blur-sm rounded overflow-hidden transition-all duration-300 card-hover flex flex-col h-full group">
+                        <div class="relative h-20 md:h-64 overflow-hidden">
+                            <img src="https://picsum.photos/seed/invitation-${index + 1}/300/450" alt="${displayName}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700">
+                        </div>
+                        <div class="p-1 md:p-5 flex flex-col flex-grow">
+                            <h3 class="serif text-[7px] md:text-lg font-bold text-white truncate mb-0.5">${displayName}</h3>
+                            <p class="text-[7px] md:text-lg font-bold text-[#d4af37] mb-1.5 md:mb-5">${theme.price}</p>
+                            <div class="mt-auto flex flex-col gap-1">
+                                <a href="${theme.demo}" target="_blank" class="block w-full py-0.5 md:py-2 text-center text-[6px] md:text-[10px] font-bold rounded border border-[#d4af37]/40 text-[#d4af37]">DEMO</a>
+                                <a href="${waBase}${encodeURIComponent('Halo, saya ingin pesan ' + displayName)}" target="_blank" class="btn-gold block w-full py-0.5 md:py-2 text-center text-[6px] md:text-[10px] font-bold rounded text-slate-950">PESAN</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', card);
+            });
+        </script>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-8 text-center border-t border-slate-900">
+        <h2 class="serif text-lg md:text-3xl gold-gradient font-bold">Luxury Invite</h2>
+        <p class="text-slate-700 text-[7px] mt-4 uppercase tracking-widest pb-8">© 2026 Luxury Invite. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Teks Berjalan -->
+    <div class="fixed bottom-0 left-0 w-full bg-[#d4af37] py-1.5 z-[60] border-t border-white/20">
+        <div class="overflow-hidden">
+            <div class="marquee text-[#020617] font-bold uppercase tracking-[0.2em] text-[8px] md:text-sm">
+                Promo Spesial Bulan Ini ✨ Diskon Hingga 20% ✨ Hubungi Admin via WhatsApp ✨ Luxury Invite ✨ Modern & Berkelas ✨
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const music = document.getElementById('bgMusic');
+        let musicStarted = false;
+        function startMusic() {
+            if (!musicStarted) {
+                music.play().then(() => { musicStarted = true; }).catch(e => {});
+            }
+        }
+        window.addEventListener('click', startMusic, { once: true });
+        window.addEventListener('scroll', startMusic, { once: true });
+        window.addEventListener('touchstart', startMusic, { once: true });
+    </script>
+
 </body>
 </html>
